@@ -6,91 +6,73 @@
   <title>Kerri Sharp - Software Engineer & Web Developer</title>
   <meta name="description" content="CV of Kerri Sharp, software engineer and web developer based in Somerset, England.">
   <style>
-    :root {
-      --ink: #111;
-      --muted: #555;
-      --rule: #111;
-      --link: #111;
-    }
-
-    * { box-sizing: border-box; }
-
+    /* Sizes are in em so the whole page scales from body's font-size. */
     body {
       margin: 0;
-      color: var(--ink);
-      background: #fff;
+      color: #111;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-      font-size: 1rem;
-      line-height: 1.5;
+      line-height: 1.4;
     }
 
     main {
-      max-width: 46rem;
+      max-width: 54em;
       margin: 0 auto;
-      padding: 2.5rem 1.25rem 4rem;
+      padding: 2.5rem 1.25rem;
     }
 
     h1 {
       margin: 0;
-      font-size: 2.25rem;
+      font-size: 2.3em;
       line-height: 1.1;
       letter-spacing: -0.01em;
     }
 
     h2 {
       display: flex;
+      flex-wrap: wrap;
       justify-content: space-between;
       align-items: baseline;
-      gap: 1rem;
-      margin: 1.75rem 0 0.5rem;
-      padding-bottom: 0.2rem;
-      border-bottom: 2px solid var(--rule);
-      font-size: 1.05rem;
+      column-gap: 1em;
+      margin: 1.1em 0 0.4em;
+      padding-bottom: 0.2em;
+      border-bottom: 2px solid;
+      font-size: 1.1em;
       line-height: 1.3;
+      break-after: avoid;
     }
 
-    h2 .dates {
-      flex: none;
-      font-weight: 700;
-      white-space: nowrap;
-    }
+    .dates { white-space: nowrap; }
 
-    p { margin: 0 0 0.9rem; }
+    p { margin: 0 0 0.75em; }
 
-    ul { margin: 0; padding-left: 1.1rem; }
-    li { margin-bottom: 0.35rem; }
+    ul { margin: 0; padding-left: 1.1em; }
+    li { margin-bottom: 0.2em; }
 
-    a { color: var(--link); text-underline-offset: 0.15em; }
-    a:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+    a { color: #0b57d0; text-underline-offset: 0.15em; }
 
     .contact {
-      margin: 0.35rem 0 1.5rem;
-      color: var(--muted);
-      font-size: 0.95rem;
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: 1.5em;
+      margin: 0.35em 0 1.2em;
+      color: #555;
+      font-size: 0.95em;
     }
 
-    .contact a { color: var(--muted); }
+    section { break-inside: avoid-page; }
 
-    @media (max-width: 34rem) {
-      h2 { flex-direction: column; gap: 0.1rem; }
-    }
+    footer { margin-top: 2em; }
 
-    /* Print: A4, one page where possible */
     @page {
       size: A4;
       margin: 12mm 14mm;
     }
 
     @media print {
-      body { font-size: 9.5pt; line-height: 1.38; }
-      main { max-width: none; margin: 0; padding: 0; }
-      h1 { font-size: 22pt; }
-      h2 { margin: 11pt 0 4pt; font-size: 10.5pt; break-after: avoid; }
-      p { margin-bottom: 7pt; }
-      li { margin-bottom: 2pt; break-inside: avoid; }
-      .contact { margin-bottom: 11pt; font-size: 9pt; }
-      a { text-decoration: none; }
-      section { break-inside: avoid-page; }
+      body { font-size: 9.5pt; }
+      main { padding: 0; }
+      a { color: inherit; text-decoration: none; }
+      footer { display: none; }
     }
   </style>
 </head>
@@ -101,8 +83,8 @@
       <p class="contact">
         Somerset, England
         <a href="mailto:sharp.kerri@gmail.com">sharp.kerri@gmail.com</a>
-        <a href="//www.linkedin.com/in/kerri-sharp/" target="_blank">LinkedIn</a>
-        <a href="//github.com/razor-sharp2814/" target="_blank">GitHub</a>
+        <a href="//www.linkedin.com/in/kerri-sharp/" target="_blank">linkedin.com/in/kerri-sharp</a>
+        <a href="//github.com/razor-sharp2814/" target="_blank">github.com/razor-sharp2814</a>
       </p>
     </header>
 
