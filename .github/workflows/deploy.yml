@@ -1,0 +1,42 @@
+name: Build PDF and deploy site
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    # macOS so the PDF uses the same system font (San Francisco) as the page does on a Mac.
+    runs-on: macos-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Build PDF
+        run: |
+          ./build-pdf.sh
+          test -s kerri-sharp-cv.pdf
+
+      - name: Collect site files
+        run: |
+          mkdir _site
+          cp index.html kerri-sharp-cv.pdf _site/
+
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+
+      - id: deployment
+        uses: actions/deploy-pages@v4
