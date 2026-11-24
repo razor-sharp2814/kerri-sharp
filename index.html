@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kerri Sharp - Software Engineer & Web Developer</title>
+  <meta name="description" content="CV of Kerri Sharp, software engineer and web developer based in Somerset, England.">
+  <style>
+    :root {
+      --ink: #111;
+      --muted: #555;
+      --rule: #111;
+      --link: #111;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: #fff;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+
+    main {
+      max-width: 46rem;
+      margin: 0 auto;
+      padding: 2.5rem 1.25rem 4rem;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 2.25rem;
+      line-height: 1.1;
+      letter-spacing: -0.01em;
+    }
+
+    h2 {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 1rem;
+      margin: 1.75rem 0 0.5rem;
+      padding-bottom: 0.2rem;
+      border-bottom: 2px solid var(--rule);
+      font-size: 1.05rem;
+      line-height: 1.3;
+    }
+
+    h2 .dates {
+      flex: none;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    p { margin: 0 0 0.9rem; }
+
+    ul { margin: 0; padding-left: 1.1rem; }
+    li { margin-bottom: 0.35rem; }
+
+    a { color: var(--link); text-underline-offset: 0.15em; }
+    a:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+
+    .contact {
+      margin: 0.35rem 0 1.5rem;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .contact a { color: var(--muted); }
+
+    @media (max-width: 34rem) {
+      h2 { flex-direction: column; gap: 0.1rem; }
+    }
+
+    /* Print: A4, one page where possible */
+    @page {
+      size: A4;
+      margin: 12mm 14mm;
+    }
+
+    @media print {
+      body { font-size: 9.5pt; line-height: 1.38; }
+      main { max-width: none; margin: 0; padding: 0; }
+      h1 { font-size: 22pt; }
+      h2 { margin: 11pt 0 4pt; font-size: 10.5pt; break-after: avoid; }
+      p { margin-bottom: 7pt; }
+      li { margin-bottom: 2pt; break-inside: avoid; }
+      .contact { margin-bottom: 11pt; font-size: 9pt; }
+      a { text-decoration: none; }
+      section { break-inside: avoid-page; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Kerri Sharp</h1>
+      <p class="contact">
+        Somerset, England
+        <a href="mailto:sharp.kerri@gmail.com">sharp.kerri@gmail.com</a>
+        <a href="//www.linkedin.com/in/kerri-sharp/" target="_blank">LinkedIn</a>
+        <a href="//github.com/razor-sharp2814/" target="_blank">GitHub</a>
+      </p>
+    </header>
+
+    <p>Experienced software engineer and web developer specialising in bespoke web applications, websites, emails &amp; APIs. Adept at delivering user-focused, testable solutions and passionate about fostering a healthy workplace culture. Industry experience in crafting impactful digital products and services since 2016.</p>
+
+    <p>Key skills include React, Next.js, Vue.js, TypeScript, JavaScript, Tailwind, SASS, CSS, HTML, MJML, PHP, Laravel, WordPress, Go, MySQL, PostgreSQL, Docker, AWS, Supabase, Markdown, Agile, Scrum, Git, CI/CD, Jira &amp; Figma.</p>
+
+    <section>
+      <h2><span>Founder, Razor Sharp</span> <span class="dates">May 2025 - Present</span></h2>
+      <ul>
+        <li>Built and launched a solo technical consultancy serving small businesses and entrepreneurs, delivering bespoke websites, web applications, workflow automation and code rescue services.</li>
+        <li>Rescued AI-generated and orphaned codebases for non-technical business owners, enabling my clients to regain confidence and control over their own systems.</li>
+        <li>Designed and implemented workflow automation solutions, reducing manual overhead for business owners by integrating third-party tools &amp; APIs.</li>
+        <li>Delivered website performance and analytics audits &amp; implementations, giving clients clear, actionable data to inform business decisions.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2><span>Software Engineer II, Sigma7 Intelligence Fusion</span> <span class="dates">Sep 2021 - Apr 2025</span></h2>
+      <ul>
+        <li>Crafted a greenfield SaaS with Next.js, TypeScript, Tailwind &amp; Storybook as part of a Scrum team, deployed with Vercel. This empowered the company to package services to a range of new customer types.</li>
+        <li>Created a "Service Status" utility with data from AWS CloudWatch, deployed as an AWS Lambda, written in Go, React, TypeScript &amp; Tailwind. This reduced the volume of support tickets and technical enquiries.</li>
+        <li>Built an AI virtual assistant platform leveraging Go &amp; AWS Bedrock, integrating Claude to deliver context-rich customer interactions.</li>
+        <li>Created a fully-documented REST API using PHP (Slim), PostgreSQL &amp; deployed via AWS to enable customers to share user generated content with their colleagues within the company's applications.</li>
+        <li>Engineered an AWS Lambda written in Go to continuously process &amp; send notifications from AWS SQS payloads, offering user customisation of notifications and savings on third-party service costs.</li>
+        <li>Wrote custom ETL pipelines to display third-party data alongside internally published intelligence using PHP (Lumen) to provide customers with more sources.</li>
+        <li>Maintained a legacy, event-driven, CQRS PHP API (Lumen), allowing intelligence analysts to keep information and statistics up-to-date via the event stream.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2><span>Contractor, Think Productive</span> <span class="dates">Dec 2020 - Aug 2021</span></h2>
+      <ul>
+        <li>Created a WordPress theme using PHP, SASS &amp; JS as a central part of the company's global rebrand. By writing bespoke features, I reduced the reliance on third-party WordPress plugins from 63 down to 4, vastly improving page load times and reducing employee frustration.</li>
+        <li>Built bespoke WordPress plugins to create an asynchronous learning platform, empowering thousands of delegates globally to access workshop materials on-demand in multiple languages. My work replaced an expensive, third-party solution, prone to frequent outages.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2><span>Web Developer, Opia</span> <span class="dates">Jun 2016 - Nov 2020</span></h2>
+      <ul>
+        <li>Developed 100+ websites for clients including Google, Dell &amp; HP using PHP (Laravel, Symfony, Blade), Vue.js, SASS (Bootstrap) &amp; MySQL. These campaigns rewarded customers with cashback or gifts, incentivising tens of thousands of additional purchases.</li>
+        <li>Led email campaign development, creating responsive HTML emails (MJML), tested with Litmus and delivered via Mailgun on behalf of clients including Samsung, Microsoft &amp; LG. My work helped reinforce brand identity across a variety of digital communications.</li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>
