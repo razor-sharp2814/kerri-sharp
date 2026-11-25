@@ -14,10 +14,43 @@
     }
 
     @font-face {
-      font-family: Inter;
-      src: url(fonts/Inter-Bold.woff2) format("woff2");
+      font-family: Raleway;
+      src: url(fonts/Raleway-Bold.woff2) format("woff2");
       font-weight: 700;
       font-display: block;
+    }
+
+    h1, h2, h3 {
+      font-family: Raleway, Inter, Arial, sans-serif;
+      font-variant-numeric: lining-nums;
+    }
+
+    /* Tailwind colours, yummy! */
+    :root {
+      --background: #fff;
+      --text: oklch(21% 0.006 285.885);        /* zinc-900 */
+      --muted: oklch(44.2% 0.017 285.786);     /* zinc-600 */
+      --link: oklch(49.6% 0.265 301.924);      /* purple-700 */
+      --selection: oklch(76.5% 0.177 163.223); /* emerald-400 */
+      --band: oklch(94.6% 0.033 307.174);      /* purple-100 */
+    }
+
+    /* Screen only dark mode, so printing and the PDF always stay light. */
+    @media screen and (prefers-color-scheme: dark) {
+      :root {
+        color-scheme: dark;
+        --background: oklch(21% 0.006 285.885);  /* zinc-900 */
+        --text: #fff;
+        --muted: oklch(70.5% 0.015 286.067);     /* zinc-400 */
+        --link: oklch(76.5% 0.177 163.223);      /* emerald-400 */
+        --selection: oklch(71.4% 0.203 305.504); /* purple-400 */
+        --band: oklch(27.4% 0.006 286.033);      /* zinc-800 */
+      }
+    }
+
+    ::selection {
+      background: var(--selection);
+      color: oklch(21% 0.006 285.885); /* zinc-900 */
     }
 
     body {
