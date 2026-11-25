@@ -4,12 +4,15 @@ My CV as a single web page, published with GitHub Pages at
 <https://www.kerrisharp.com>.
 
 The page is styled to look the same on screen, as a PDF and on paper. On every push to `main`,
-a GitHub Actions workflow builds `kerri-sharp-cv.pdf` from the page and publishes both.
+a GitHub Actions workflow builds `kerri-sharp-cv.pdf` and `kerri-sharp-cv.docx` from the page and
+publishes all three. The Word version is plainer, and is there for job sites that read Word files
+more reliably than PDFs.
 
-To build the PDF locally (needs Google Chrome):
+To build them locally:
 
 ```sh
-./build-pdf.sh
+./build-pdf.sh    # needs Google Chrome
+./build-docx.sh   # needs pandoc (brew install pandoc)
 ```
 
 ## Credits
