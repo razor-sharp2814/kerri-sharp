@@ -1,4 +1,4 @@
-name: Build PDF and deploy site
+name: Build PDF and Word document, and deploy site
 
 on:
   push:
@@ -27,10 +27,17 @@ jobs:
           ./build-pdf.sh --no-sandbox
           test -s kerri-sharp-cv.pdf
 
+      - name: Build Word document
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y pandoc
+          ./build-docx.sh
+          test -s kerri-sharp-cv.docx
+
       - name: Collect site files
         run: |
           mkdir _site
-          cp -R index.html kerri-sharp-cv.pdf fonts _site/
+          cp -R index.html favicon.ico kerri-sharp-cv.pdf kerri-sharp-cv.docx fonts images _site/
 
       - uses: actions/upload-pages-artifact@v4
         with:
